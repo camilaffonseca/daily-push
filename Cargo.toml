@@ -4,3 +4,54 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+# password hashing algorithm
+argon2 = "0.5.3"
+
+# allows to use async functions in trait definitions
+async-trait = "0.1.88"
+
+# framework to building http servers and handling routes
+axum = "0.8.4"
+
+# adds extra funcionalities to axum, like cookie handling
+axum-extra = { version = "0.10.1", features = ["cookie"] }
+
+# datetime library (serde: serialize and deserialize datetime)
+chrono = { version = "0.4.41", features = ["serde"] }
+
+# loads variables from .env file
+dotenvy = "0.15.7"
+
+# create and validate JWT
+jsonwebtoken = "9.3.1"
+
+# lib for sending emails
+lettre = "0.11.16"
+
+# serialize and deserialize rust structures to and from JSON
+serde = { version = "1.0.219", features = ["derive"] }
+serde_json = "1.0.140"
+
+# async SQL toolkit
+sqlx = { version = "0.8.6", features = ["chrono", "postgres", "runtime-async-std-native-tls", "uuid"] }
+
+# a lib for working with time, which complements chrono
+time = "0.3.41"
+
+# async runtime that provides everything from timers to networking
+tokio = { version = "1.45.1", features = ["full"] }
+
+# a lib of modular and reusable components for building robust networking clients and servers
+tower = "0.5.2"
+
+# adds useful http utilities for working with tower and axum, like CRS and tracing support
+tower-http = { version = "0.6.4", features = ["cors", "trace"] }
+
+# provides utilities for collecting event-based logs which are vital for debugging and monitoring
+tracing-subscriber = "0.3.19"
+
+# work with UUIDs
+uuid = { version = "1.17.0", features = ["serde", "v4"] }
+
+# validations for data models
+validator = { version = "0.20.0", features = ["derive"] }
